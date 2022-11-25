@@ -1,8 +1,10 @@
-# Kodluyoruz Ilk Repo
+<img src="https://kodluyoruz.org/wp-content/uploads/2022/05/kodluyoruz_yatay_slogan.png" width="300">
+
+## Kodluyoruz Ilk Repo
 
 Bu repo [Kodluyoruz](https://www.kodluyoruz.org) Front-End Eğitiminde oluşturduğumuz ilk repo. İçerisinde bir adet README dosyası, bir adet de index.html barındırıyor.
 
-![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40">
 
 ## Installation
 
