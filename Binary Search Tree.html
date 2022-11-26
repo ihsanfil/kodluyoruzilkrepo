@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kodluyoruz - Binary Search Tree</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="row text-center"><a class="blog-header-logo mx-auto" href="#"><img src="https://res.cloudinary.com/danielkapper-com/image/upload/v1577156572/logo-one.png" width="400" /></a></div>
+    <div class="container">
+        <h4 class="w-100 text-center">Dinamik Binary Search Tree Projem</h4>
+        <p class="text-center">Örnek dizi: <strong>[7, 5, 1, 8, 3, 6, 0, 9, 4, 2]</strong></p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="" id="bstForm" class="text-center">
+                    <legend>
+                        <input type="number" name="bst-val" placeholder="Değer Girin" />
+                        <button type="submit">Ekle</button>
+                    </legend>
+                </form>
+            </div>
+        </div>
+        <canvas id="myCanvas"></canvas>
+    </div>
+    <style>
+        /*          div {
+              position: fixed;
+              display: inline-flex;
+              flex-direction: column;
+              top: 0;
+              right: 2em;
+              bottom: 0;
+              justify-content: center;
+          }*/
+
+        form {
+            padding: 1em;
+            border-radius: 4px;
+            box-shadow: 4px 4px 4px 0 black;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid grey;
+        }
+
+        button {
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            background-color: blue;
+            color: white;
+            margin-left: 4px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+            input:focus + button, button:hover {
+                background-color: red;
+                transition: all .3s;
+            }
+    </style>
+    <script>
+          const canvas = document.getElementById('myCanvas');
+        canvas.width = window.innerWidth - 500;
+        canvas.height = window.innerHeight*2;
+        const ctx = canvas.getContext("2d");
+        ctx.font = "20px Arial";
+
+        function makeNode(x, y, data) {
+            ctx.beginPath();
+            ctx.arc(x, y, 30, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.stroke();
+        }
+        function createText(x, y, data) {
+            ctx.fillStyle = "black";
+            ctx.fillText(data, x - 10, y + 5);
+        }
+        function joinNode(x, y, toX, toY) {
+            ctx.moveTo(x, y);
+            ctx.lineTo(toX, toY);
+            ctx.stroke();
+        }
+        class Node {
+            constructor(data, x, y) {
+                this.value = data;
+                this.frequency = 1;
+                this.x = x;
+                this.y = y;
+                this.left = null;
+                this.right = null;
+            }
+        }
+        class BST {
+            constructor() {
+                this.root = null;
+            }
+            insertHelper(value, node, parentNode, gap, x, y) {
+                gap = (gap / 2 > 60) ? gap / 2 : gap;
+                if (node === null) {
+                    node = new Node(value, x, y);
+                    if (parentNode !== null) {
+                        joinNode(x, y, parentNode.x, parentNode.y);
+                        makeNode(parentNode.x, parentNode.y, parentNode.value);
+                        createText(parentNode.x, parentNode.y, parentNode.value);
+                    }
+                    makeNode(x, y, value);
+                    createText(x, y, value);
+
+                    return node;
+                }
+                if (node.value === value) {
+                    node.frequency++;
+                    return node;
+                } else if (node.value > value) {
+                    node.left = this.insertHelper(value, node.left, node, gap, x - gap, y + 100);
+                } else if (node.value < value) {
+                    node.right = this.insertHelper(value, node.right, node, gap, x + gap, y + 100);
+                }
+                return node;
+            }
+            insert(value) {
+                this.root = this.insertHelper(value, this.root, null, 500, 600, 50);
+            }
+        }
+
+        var tree = new BST();
+        var tree = new BST();
+        tree.insert(6);
+        tree.insert(7);
+        tree.insert(5);
+        tree.insert(1);
+        tree.insert(8);
+        tree.insert(3);
+        tree.insert(0);
+        tree.insert(9);
+        tree.insert(4);
+        tree.insert(2);
+        var bstForm = document.getElementById('bstForm');
+        bstForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            let val = document.querySelector('[name="bst-val"]').value;
+            tree.insert(parseInt(val));
+        });
+
+    </script>
+</body>
+</html>
