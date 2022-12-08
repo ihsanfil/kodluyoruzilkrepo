@@ -128,49 +128,68 @@ namespace degisken
 
             // int sonuc2 = 20%3;
             // Console.WriteLine(sonuc2); 
-           Console.WriteLine("******* Implicit Conversion / Bilinçsiz dönüşüm ************"); 
-           byte a = 3;
-           sbyte b= 7;
-           short c = 10;
+        //    Console.WriteLine("******* Implicit Conversion / Bilinçsiz dönüşüm ************"); 
+        //    byte a = 3;
+        //    sbyte b= 7;
+        //    short c = 10;
 
-           int d = a+b+c;
-           Console.WriteLine("d: "+d);
+        //    int d = a+b+c;
+        //    Console.WriteLine("d: "+d);
 
-           long h = d;
-           Console.WriteLine("h: "+h);
+        //    long h = d;
+        //    Console.WriteLine("h: "+h);
 
 
-            float i = h;
-           Console.WriteLine("i: "+i);
+        //     float i = h;
+        //    Console.WriteLine("i: "+i);
 
-           string z = "zikriye";
-           char f = 'ü';
-           object o = z+" "+f+". "+i;
-           Console.WriteLine(o);
+        //    string z = "zikriye";
+        //    char f = 'ü';
+        //    object o = z+" "+f+". "+i;
+        //    Console.WriteLine(o);
           
-           Console.WriteLine("******* Explicit Conversion / Bilinçli dönüşüm ************"); 
-           int x =4;
-           byte y = (byte)x;
+        //    Console.WriteLine("******* Explicit Conversion / Bilinçli dönüşüm ************"); 
+        //    int x =4;
+        //    byte y = (byte)x;
  
-         Console.WriteLine("y: " + y);
-             int br = 100;
-             byte t = (byte)br;
-         Console.WriteLine("t: " + t);
+        //  Console.WriteLine("y: " + y);
+        //      int br = 100;
+        //      byte t = (byte)br;
+        //  Console.WriteLine("t: " + t);
 
-             float w = 10.3f;
-             byte v = (byte)w;
-         Console.WriteLine("v: " + v);
-          /**** To String*/
-         Console.WriteLine("*** To String ***"); 
-        int xx = 53;
-        string yy = xx.ToString();
-         Console.WriteLine(yy); 
-        /**** Convert*/
-        string xx1 = "53";
-        string xx2 = "1";
+        //      float w = 10.3f;
+        //      byte v = (byte)w;
+        //  Console.WriteLine("v: " + v);
+        //   /**** To String*/
+        //  Console.WriteLine("*** To String ***"); 
+        // int xx = 53;
+        // string yy = xx.ToString();
+        //  Console.WriteLine(yy); 
+        // /**** Convert*/
+        // string xx1 = "53";
+        // string xx2 = "1";
 
-        int toplam = Convert.ToInt32(xx1)+ Convert.ToInt32(xx2);
-        Console.WriteLine("toplam: "+toplam); 
+        // int toplam = Convert.ToInt32(xx1)+ Convert.ToInt32(xx2);
+        // Console.WriteLine("toplam: "+toplam); 
+
+        try
+        {
+            int a = int.Parse(Console.ReadLine());
+
+            int b = int.Parse(Console.ReadLine());
+
+            int c = a+b;
+
+            Console.WriteLine(c);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Bir Hata Oluştu: "+ ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("İşlem tamamlandı.");
+        }
         
         }
     }
