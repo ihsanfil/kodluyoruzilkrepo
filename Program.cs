@@ -69,67 +69,109 @@ namespace degisken
 
         /////
 
-            int x =53;
-            int y =54;
-            y = y+2;
-            Console.WriteLine(y);
-            y +=2;
-            Console.WriteLine(y);
-            y/=1;
-            Console.WriteLine(y);
-            x *=2;
-            Console.WriteLine(x);
+            // int x =53;
+            // int y =54;
+            // y = y+2;
+            // Console.WriteLine(y);
+            // y +=2;
+            // Console.WriteLine(y);
+            // y/=1;
+            // Console.WriteLine(y);
+            // x *=2;
+            // Console.WriteLine(x);
 
 
-            ///////////
+            // ///////////
 
-            bool isSucces = true;
-            bool isCompleted = false;
+            // bool isSucces = true;
+            // bool isCompleted = false;
 
-            if(isSucces && isCompleted)
-                Console.WriteLine("Mükemmel!");
+            // if(isSucces && isCompleted)
+            //     Console.WriteLine("Mükemmel!");
 
-            if(isSucces || isCompleted)
-                Console.WriteLine("Harika!");
+            // if(isSucces || isCompleted)
+            //     Console.WriteLine("Harika!");
             
-            if (isSucces && isCompleted)
-                Console.WriteLine("İyi!");
+            // if (isSucces && isCompleted)
+            //     Console.WriteLine("İyi!");
 
         
-            /////////////////
+            // /////////////////
 
-            int a = 3;
-            int b = 4;
-            bool sonuc = a<b; 
+            // int a = 3;
+            // int b = 4;
+            // bool sonuc = a<b; 
 
-            Console.WriteLine(sonuc);
-            sonuc = a>b;
-            Console.WriteLine(sonuc);
-            sonuc = a>=b;
-            Console.WriteLine(sonuc);
-            sonuc = a<=b;
-            Console.WriteLine(sonuc);
-            sonuc = a==b;
-            Console.WriteLine(sonuc);
-            sonuc = a!=b;
-            Console.WriteLine(sonuc);
+            // Console.WriteLine(sonuc);
+            // sonuc = a>b;
+            // Console.WriteLine(sonuc);
+            // sonuc = a>=b;
+            // Console.WriteLine(sonuc);
+            // sonuc = a<=b;
+            // Console.WriteLine(sonuc);
+            // sonuc = a==b;
+            // Console.WriteLine(sonuc);
+            // sonuc = a!=b;
+            // Console.WriteLine(sonuc);
 
-            /////////////
+            // /////////////
 
-            int sayi1 = 10;
-            int sayi2 = 5;
-            int sonuc1 = sayi1/sayi2;
-            Console.WriteLine(sonuc1);
-            sonuc1 = sayi1+sayi2;
-            Console.WriteLine(sonuc1);
-            sonuc1 = sayi1+sayi2;
-            Console.WriteLine(sayi1);
-            sonuc1 = sayi1++;
+            // int sayi1 = 10;
+            // int sayi2 = 5;
+            // int sonuc1 = sayi1/sayi2;
+            // Console.WriteLine(sonuc1);
+            // sonuc1 = sayi1+sayi2;
+            // Console.WriteLine(sonuc1);
+            // sonuc1 = sayi1+sayi2;
+            // Console.WriteLine(sayi1);
+            // sonuc1 = sayi1++;
 
-            int sonuc2 = 20%3;
-            Console.WriteLine(sonuc2);
+            // int sonuc2 = 20%3;
+            // Console.WriteLine(sonuc2); 
+           Console.WriteLine("******* Implicit Conversion / Bilinçsiz dönüşüm ************"); 
+           byte a = 3;
+           sbyte b= 7;
+           short c = 10;
+
+           int d = a+b+c;
+           Console.WriteLine("d: "+d);
+
+           long h = d;
+           Console.WriteLine("h: "+h);
 
 
+            float i = h;
+           Console.WriteLine("i: "+i);
+
+           string z = "zikriye";
+           char f = 'ü';
+           object o = z+" "+f+". "+i;
+           Console.WriteLine(o);
+          
+           Console.WriteLine("******* Explicit Conversion / Bilinçli dönüşüm ************"); 
+           int x =4;
+           byte y = (byte)x;
+ 
+         Console.WriteLine("y: " + y);
+             int br = 100;
+             byte t = (byte)br;
+         Console.WriteLine("t: " + t);
+
+             float w = 10.3f;
+             byte v = (byte)w;
+         Console.WriteLine("v: " + v);
+          /**** To String*/
+         Console.WriteLine("*** To String ***"); 
+        int xx = 53;
+        string yy = xx.ToString();
+         Console.WriteLine(yy); 
+        /**** Convert*/
+        string xx1 = "53";
+        string xx2 = "1";
+
+        int toplam = Convert.ToInt32(xx1)+ Convert.ToInt32(xx2);
+        Console.WriteLine("toplam: "+toplam); 
+        
         }
     }
 }
