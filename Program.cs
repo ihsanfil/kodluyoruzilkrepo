@@ -172,25 +172,34 @@ namespace degisken
         // int toplam = Convert.ToInt32(xx1)+ Convert.ToInt32(xx2);
         // Console.WriteLine("toplam: "+toplam); 
 
-        try
-        {
-            int a = int.Parse(Console.ReadLine());
+        // try
+        // {
+        //     int a = int.Parse(Console.ReadLine());
 
-            int b = int.Parse(Console.ReadLine());
+        //     int b = int.Parse(Console.ReadLine());
 
-            int c = a+b;
+        //     int c = a+b;
 
-            Console.WriteLine(c);
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("Bir Hata Oluştu: "+ ex.Message);
-        }
-        finally
-        {
-            Console.WriteLine("İşlem tamamlandı.");
-        }
+        //     Console.WriteLine(c);
+        // }
+        // catch(Exception ex)
+        // {
+        //     Console.WriteLine("Bir Hata Oluştu: "+ ex.Message);
+        // }
+        // finally
+        // {
+        //     Console.WriteLine("İşlem tamamlandı.");
+        // }
         
-        }
-    }
+        // }
+         int time = DateTime.Now.Hour;
+         if (time <= 18)
+         {
+            Console.WriteLine("İyi Günler");
+         }else{
+              Console.WriteLine("İyi Akşamlar");
+         }  
+
 }
+    }
+    }
