@@ -192,14 +192,57 @@ namespace degisken
         // }
         
         // }
-         int time = DateTime.Now.Hour;
-         if (time <= 18)
-         {
-            Console.WriteLine("İyi Günler");
-         }else{
-              Console.WriteLine("İyi Akşamlar");
-         }  
-
-}
-    }
+        //  int time = DateTime.Now.Hour;
+        //  if (time <= 18)
+        //  {
+        //     Console.WriteLine("İyi Günler");
+        //  }else{
+        //       Console.WriteLine("İyi Akşamlar");
+        //  }  
+        int month = DateTime.Now.Month;
+        //month = 10;
+            switch (month)
+            {
+                case 1:
+                Console.WriteLine("ocak ayındasınız");
+                break;
+                case 2:
+                Console.WriteLine("şubat ayındasınız");
+                break;
+                case 3:
+                Console.WriteLine("mart ayındasınız");
+                break;
+                case 4:
+                Console.WriteLine("nisan ayındasınız");
+                break;
+                case 5:
+                Console.WriteLine("mayıs ayındasınız");
+                break;
+                case 6:
+                Console.WriteLine("haziran ayındasınız");
+                break;
+                case 7:
+                Console.WriteLine("temmuz ayındasınız");
+                break;
+                case 8:
+                Console.WriteLine("ağustos ayındasınız");
+                break;
+                case 9:
+                Console.WriteLine("Eylül ayındasınız");
+                break;
+                case 10:
+                Console.WriteLine("Ekim ayındasınız");
+                break;
+                case 11:
+                Console.WriteLine("Kasım ayındasınız");
+                break;
+                case 12:
+                Console.WriteLine("Aralık ayındasınız");
+                break;
+                default:          
+                Console.WriteLine("geçersiz ay");
+                break;
+            }
+         }
+      }
     }
