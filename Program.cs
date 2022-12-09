@@ -254,25 +254,50 @@ namespace degisken
                                   
             // }
             //1 ile 1000 arasındaki tek ve çift sayıların toplamını hesaplayalım ayrı ayrı ekrana yazdıralım
-            int tek=0;
-            int cift=0;             
-            for (int i = 1; i <= 1000; i++)
-            {
-                // if(i == 17) { //atla
-                //     continue;
-                // }
-                // if(i == 30){ //sonlandır
-                //     break;
-                // }
-                if(i %2== 1){
-                    tek += i;
-                }else{
-                     cift += i;
-                }                
-            }
-            Console.WriteLine("Tek Sayılar toplamı: {0}",tek);
-            Console.WriteLine("Çift Sayılar toplamı: {0}",cift);
+            // int tek=0;
+            // int cift=0;             
+            // for (int i = 1; i <= 1000; i++)
+            // {
+            //     // if(i == 17) { //atla
+            //     //     continue;
+            //     // }
+            //     // if(i == 30){ //sonlandır
+            //     //     break;
+            //     // }
+            //     if(i %2== 1){
+            //         tek += i;
+            //     }else{
+            //          cift += i;
+            //     }                
+            // }
+            // Console.WriteLine("Tek Sayılar toplamı: {0}",tek);
+            // Console.WriteLine("Çift Sayılar toplamı: {0}",cift);
 
+        //** DÖNGÜLER **//
+        //    Console.WriteLine("bir sayı girin");
+        //    int sayi2= Convert.ToInt32(Console.ReadLine());
+        //    int toplam=0;
+        //    int i=0;
+        //    while (i <= sayi2)
+        //    {
+        //       toplam+=i;
+        //       i++;            
+        //    }
+        //    Console.WriteLine("ortalam: "+ toplam/sayi2);
+        // int [] sayilar = {0,1,2,3,4,5,6,7,8,9,10};
+        // Console.WriteLine(sayilar.Length);
+        // foreach (var item in sayilar)
+        // {
+            
+        //     if(item != (sayilar.Length-1)){
+        //         Console.Write(item+",");
+        //     }
+        //     else if(item == (sayilar.Length-1))  
+        //     {
+        //          Console.Write(item);
+        //     }
+            
+        // }
          }
       }
     }
