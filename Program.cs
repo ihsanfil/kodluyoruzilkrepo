@@ -298,6 +298,13 @@ namespace degisken
         //     }
             
         // }
+        /****== DİZİLER ==****/
+
+            string[] renkler = {"kırmızı","mavi","yeşil"};
+            foreach (var item in renkler)
+            {
+                Console.WriteLine(item);
+            }
          }
       }
     }
