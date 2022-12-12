@@ -300,11 +300,53 @@ namespace degisken
         // }
         /****== DİZİLER ==****/
 
-            string[] renkler = {"kırmızı","mavi","yeşil"};
-            foreach (var item in renkler)
-            {
-                Console.WriteLine(item);
-            }
+        // string[] renkler = {"kırmızı","mavi","yeşil"};
+        // foreach (var item in renkler)
+        // {
+        //     Console.WriteLine(item);
+        // }
+         /**== Array Sınıfı ve Methodlari ==**/
+
+         //sırasız
+         Console.WriteLine("******sırasız************");
+         int[] sayilar = {10,30,40,50,60,5,3,25};
+         foreach (var item in sayilar)
+         {
+            Console.WriteLine(item);
+         }
+         Console.WriteLine("******sıralı************");
+        //sıralı      
+         Array.Sort(sayilar);  
+         foreach (var item in sayilar)
+         {
+            Console.WriteLine(item);
+         }
+         Console.WriteLine("********Clear************");
+         //Clear
+         Array.Clear(sayilar,2,2);
+          foreach (var item in sayilar)
+         {
+            Console.WriteLine(item);
+         }
+        Console.WriteLine("******Reverse************");
+        //Reverse
+        Array.Reverse(sayilar);
+           foreach (var item in sayilar)
+         {
+            Console.WriteLine(item);
+         }
+         Console.WriteLine("******IndexOf************");
+         //IndexOf
+         var indexOf= Array.IndexOf(sayilar,40);
+          Console.WriteLine(indexOf);
+          Console.WriteLine("******Resize************");
+          //Resize
+          Array.Resize<int>(ref sayilar,5);
+           foreach (var item in sayilar)
+         {
+            Console.WriteLine(item);
+         }
+         
          }
       }
     }
