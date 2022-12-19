@@ -6,47 +6,46 @@ namespace degisken
     {
         static void Main(string[] args)
         {
-                                     
-          static int Topla (int a, int b){
-            return a+b;
-          }
+              //out parametreler
+              string sayi = "999";
+              //int outSayi;
+
+             bool sonuc= int.TryParse(sayi,out int outSayi);     
+
+              if(sonuc)
+              {
+                Console.WriteLine("Başarılı "+ outSayi);
+              }else{
+                Console.WriteLine("Başarısız ");
+              }    
+
+              Metotlar instance = new Metotlar();
+              instance.Topla(4,5,out int sonuc3);
+              Console.WriteLine("sonuc3= "+sonuc3);   
+
+              //Metot Overloading - Aşırı Yükleme
+              int ifade = 999;
+              instance.EkranaYazdir(ifade);
           
-          int sonuc = Topla(10,43);
-          // Console.WriteLine(sonuc);
-
-          Metotlar metot = new Metotlar();
-          // metot.EkranaYazdir(Convert.ToString(sonuc));
-
-          // int carp= metot.Carp(10,3);
-          // metot.EkranaYazdir(Convert.ToString(carp));
-          int a= 10;
-          int b= 43;
-          int sonuc1 = Topla(a,b);
-          int sonuc2 = metot.ArttirveTopla(ref a,ref b);
-          metot.EkranaYazdir(Convert.ToString(sonuc1));
-          metot.EkranaYazdir(Convert.ToString(sonuc2));
-          metot.EkranaYazdir(Convert.ToString(a));
-          metot.EkranaYazdir(Convert.ToString(b));
 
         }      
             
     }//Program-class-end
+   class Metotlar 
+   {
+             public void Topla (int a, int b,out int toplam)
+             {
+              toplam = a+b;
+             }
 
-    class Metotlar{
+             public void EkranaYazdir(string veri){
+              Console.WriteLine(veri);
+             }
+              public void EkranaYazdir(int veri){ //overloading
+              Console.WriteLine(veri);
+             }
 
-     public void EkranaYazdir(string veri) {
-         Console.WriteLine(veri);
-     }
-     public int Carp(int a, int b){
-       
-       return a*b;
-     }
-     public int ArttirveTopla(ref int deger1,ref int deger2){
-      //orjinal değişken değerini değiştirir/atama yapar
-        deger1+=1;
-        deger2+=1;
-
-      return deger1+deger2;
-     }
-    }
+   }
+    
 }
+
