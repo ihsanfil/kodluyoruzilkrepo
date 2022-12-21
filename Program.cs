@@ -6,114 +6,84 @@ namespace degisken
     {
         static void Main(string[] args)
         {
-            //out parametreler
-            //   string sayi = "999";
-            //   //int outSayi;
-
-            //  bool sonuc= int.TryParse(sayi,out int outSayi);     
-
-            //   if(sonuc)
-            //   {
-            //     Console.WriteLine("Başarılı "+ outSayi);
-            //   }else{
-            //     Console.WriteLine("Başarısız ");
-            //   }    
-
-            Metotlar instance = new Metotlar();
-            //   instance.Topla(4,5,out int sonuc3);
-            //   Console.WriteLine("sonuc3= "+sonuc3);   
-
-            //   //Metot Overloading - Aşırı Yükleme
-            //   int ifade = 999;
-            //   instance.EkranaYazdir(ifade);
-         
-           //##Extension ve Rekürsif Metotlar
-           //Rekürsif Metotlar
-            // int result = 1;
-            // for(int i = 1; i < 5 ; i++)
-            //   result = result*3;
-            //   Console.WriteLine(result);
-            // Console.WriteLine(instance.Expo(5,2));
-
-           //Extension  Metotlar
-
-           string ifade = "Zikriye Ürkmez";
-          //  bool sonuc = ifade.CheckSpaces();
-          //  Console.WriteLine(sonuc);
-          //  if(sonuc){
-          //    var clean= ifade.CleanSpaces();
-          //    Console.WriteLine(clean);
+          //#1 
+          //Bir konsol uygulamasında kullanıcıdan pozitif bir sayı girmesini isteyin(n). 
+          //Sonrasında kullanıcıdan n adet pozitif sayı girmesini isteyin. 
+          //Kullanıcının girmiş olduğu sayılardan çift olanlar console'a yazdırın.
+          //  Console.WriteLine("Kaç Sayı Gireceksiniz");
+          //  int total = Convert.ToInt32(Console.ReadLine());
+          //  List<int> numbers = new List<int>();
+          //  for(int i = 0; i < total; i++){
+          //       Console.WriteLine((i+1)+". sayıyı giriniz");
+          //       int readNumber = Convert.ToInt32(Console.ReadLine());
+          //       numbers.Add(readNumber);
           //  }
-          //Console.WriteLine(ifade.MakeUpperCase());
-          int[] dizi ={10,25,2,1,15,17,23,32,36};
+          //   Console.WriteLine("/****== Girilen Çift Sayılar ==****/");
+          //   foreach(var item in numbers){
+          //     if(item %2 == 0){
+          //       Console.WriteLine(item);
+          //     }
+          //   }
+
+
+          //#2
+          //Bir konsol uygulamasında kullanıcıdan pozitif iki sayı girmesini isteyin (n, m). 
+          //Sonrasında kullanıcıdan n adet pozitif sayı girmesini isteyin.
+          //Kullanıcının girmiş olduğu sayılardan m'e eşit yada tam bölünenleri console'a yazdırın. 
          
-          var sonuc = dizi.ArrayOrdered();
-          for(int i = 0; i < sonuc.Length ; i++) {
-            if(i == sonuc.Length-1){
-              Console.Write(sonuc[i]);
-              break;
-            }else{
-              Console.Write(sonuc[i]+",");
-            }
-              
-          }       
-         
+          //  Console.WriteLine("Kaç sayı gireceksiniz?");
+          //  int totalNum = Convert.ToInt32(Console.ReadLine());
+          //  Console.WriteLine("Baz alınacak sayıyı Giriniz -m");
+          //  int numberM = Convert.ToInt32(Console.ReadLine());
           
+          //  List<int> numbersTwo = new List<int>();
 
-        }      
-            
-    }//Program-class-end
-   class Metotlar 
-   {
-            //  public void Topla (int a, int b,out int toplam)
-            //  {
-            //   toplam = a+b;
-            //  }
-
-            //  public void EkranaYazdir(string veri){
-            //   Console.WriteLine(veri);
-            //  }
-            //   public void EkranaYazdir(int veri){ //overloading
-            //   Console.WriteLine(veri);
-            //  }
-
-            // public int Expo(int sayi,int us){
-            //   if(us <2){
-            //     return sayi;
-            //   }
-            //   return Expo(sayi,us-1)*sayi;
-            // }
+          //  for(int i = 0; i < totalNum; i++){
+          //         Console.WriteLine((i+1)+". sayıyı giriniz");
+          //         int readNumber = Convert.ToInt32(Console.ReadLine());
+          //         numbersTwo.Add(readNumber);
+          //  }
           
-
-    }
-    public static class Extension {
-
-      public static bool CheckSpaces(this string param){
-
-        return param.Contains(" ");
-
-      }
-
-      public static string CleanSpaces(this string param){
-              
-          string sonuc=  param.Replace(" ","");
-          return sonuc;
-      }
-
-      public static string MakeUpperCase(this string param) {
-
-        return param.ToUpper();
-      }
-
-      public static int[] ArrayOrdered(this int[] array)
-      {
+          //  //m'e eşit yada tam bölünenler
+          //  Console.WriteLine("/****== m'e eşit yada tam bölünenler ==****/");
+          //  foreach(var item in numbersTwo){
           
-        int[] sonuc = array.OrderBy(c =>c).ToArray();
-        return sonuc;
-      }
+          //   if(item == numberM || numberM % item == 0) {
+          //     Console.WriteLine(item);
+          //   }
+          //  }
+        
+          //#3
+          //Bir konsol uygulamasında kullanıcıdan pozitif bir sayı girmesini isteyin (n). 
+          //Sonrasında kullanıcıdan n adet kelime girmesi isteyin. 
+          //Kullanıcının girişini yaptığı kelimeleri sondan başa doğru console'a yazdırın.
+          
+          // Console.WriteLine("Kaç kelime gireceksiniz?");
+          // int totalKey = Convert.ToInt32(Console.ReadLine());
+          // List<string> keyList = new List<string>();
 
-    }
+          // for(int i= 0; i < totalKey; i++){
+          //    Console.WriteLine((i+1)+". kelimeyi giriniz");
+          //    keyList.Add(Console.ReadLine());
+          // }
+          // Console.WriteLine("/****== Kelimeler ==****/");
+          // keyList.Reverse();
+          // foreach(var item in keyList){
+          //      Console.WriteLine(item);
+          // }
+          
+          //#4
+          //Bir konsol uygulamasında kullanıcıdan bir cümle yazması isteyin. 
+          //Cümledeki toplam kelime ve harf sayısını console'a yazdırın.
 
-    
+          // Console.WriteLine("Bir kelime yazın");
+          // string readstring = Console.ReadLine();
+          // var word = readstring.Split(' ');
+          // var letter = readstring.Replace(" ","");
+          // Console.WriteLine(word.Length+" adet kelime var");
+          // Console.WriteLine(letter.Length+" adet harf var");
+
+        }//Main      
+    }//Program-class-end     
 }
 
