@@ -84,28 +84,121 @@ namespace degisken
           //Console.WriteLine(DateTime.Now.ToString("YY"));
           //Console.WriteLine(DateTime.Now.ToString("YYYY"));
           
-          Console.WriteLine("/**********== MATH KUTUPHANESI ==*************/");
+        //  Console.WriteLine("/**********== MATH KUTUPHANESI ==*************/");
           //#Math Kütüphanesi
-          Console.WriteLine(Math.Abs(-25)); //mutlak alır eksi değer verirsen artısını getirir
-          Console.WriteLine(Math.Sin(10)); 
-          Console.WriteLine(Math.Cos(10)); 
-          Console.WriteLine(Math.Tan(10)); 
-          Console.WriteLine(Math.Ceiling(10.53)); // 10.53'ten büyük en küçük tam sayıyı getirir 11 yani
-          Console.WriteLine(Math.Round(10.43));  //  Hangisine daha yakınsa ona yuvarlar yani 10 getirir hangisine daha yakınsa 05 e bakar
-          Console.WriteLine(Math.Floor(10.53));  //  Aşağı yuvarlar 10
+        //   Console.WriteLine(Math.Abs(-25)); //mutlak alır eksi değer verirsen artısını getirir
+        //   Console.WriteLine(Math.Sin(10)); 
+        //   Console.WriteLine(Math.Cos(10)); 
+        //   Console.WriteLine(Math.Tan(10)); 
+        //   Console.WriteLine(Math.Ceiling(10.53)); // 10.53'ten büyük en küçük tam sayıyı getirir 11 yani
+        //   Console.WriteLine(Math.Round(10.43));  //  Hangisine daha yakınsa ona yuvarlar yani 10 getirir hangisine daha yakınsa 05 e bakar
+        //   Console.WriteLine(Math.Floor(10.53));  //  Aşağı yuvarlar 10
 
-          Console.WriteLine(Math.Max(2,6));
-          Console.WriteLine(Math.Min(2,6));
+        //   Console.WriteLine(Math.Max(2,6));
+        //   Console.WriteLine(Math.Min(2,6));
           
-          Console.WriteLine("/**********== MATH KUTUPHANESI 2. bolum==*************/"); 
-          Console.WriteLine(Math.Pow(3,4)); //3 üstü 4 ü hesaplar 81 yani verir
-          Console.WriteLine(Math.Sqrt(9));  //karekök dışına sayı alır 3
-          Console.WriteLine(Math.Log(9));  //9'un e tabanındaki logoritmik karşılığını getirir
-          Console.WriteLine(Math.Exp(3));  //e üzeri 3'ü verir
-          Console.WriteLine(Math.Log10(10)); //10'sayısının logoritma 10 tabanındaki karşılığı
+        //   Console.WriteLine("/**********== MATH KUTUPHANESI 2. bolum==*************/"); 
+        //   Console.WriteLine(Math.Pow(3,4)); //3 üstü 4 ü hesaplar 81 yani verir
+        //   Console.WriteLine(Math.Sqrt(9));  //karekök dışına sayı alır 3
+        //   Console.WriteLine(Math.Log(9));  //9'un e tabanındaki logoritmik karşılığını getirir
+        //   Console.WriteLine(Math.Exp(3));  //e üzeri 3'ü verir
+        //   Console.WriteLine(Math.Log10(10)); //10'sayısının logoritma 10 tabanındaki karşılığı
 
+        // decimal d = 3.1M;
+        // var d2 = 3.99955;
+        // Console.WriteLine((d % 1) == 0);
+        // d = 3.0M;
+        // Console.WriteLine((d % 1) == 0);
+        // if (d2 is double){
+        //     Console.WriteLine("doble doğru");
+        // }
+        // if (d2 is decimal){
+        //     Console.WriteLine("decimal doğru");
+        // }
 
-        }//Main      
-    }//Program-class-end     
+        List<int> sayiListesi= new List<int>();
+           sayiListesi.Add(23);
+           sayiListesi.Add(10);
+           sayiListesi.Add(4);
+           sayiListesi.Add(5);
+           sayiListesi.Add(92);
+           sayiListesi.Add(34);
+        List<string> renkListesi = new List<string>();
+        renkListesi.Add("Kırmızı");
+        renkListesi.Add("Mavi");
+        renkListesi.Add("Turuncu");
+        renkListesi.Add("Sari");
+        renkListesi.Add("Yeşil");
+        // sayiListesi.Add(10);
+        // sayilistesi.Add(4);
+        // sayiListesi.Add(5);
+        // sayiListesi.Add(92);
+        // sayiListesi.Add(34);
+
+        //Foreach ve List. ForEach ile elemanlara erişin
+        // foreach (var sayi in sayiListesi)
+        // Console.WriteLine(sayi);
+        // foreach (var renk in renkListesi)
+        // Console.WriteLine(renk);
+        sayiListesi.ForEach(sayi => Console.WriteLine(sayi));
+        renkListesi.ForEach(renk => Console.WriteLine(renk));
+        // //Listeden eleman çıkarma
+        sayiListesi.RemoveAt(4);
+       // renkListesi.Remove("Yeşil");
+        sayiListesi.RemoveAt(0);
+        //renkListesi.RemoveAt(1);
+       
+        sayiListesi.ForEach(sayi => Console.WriteLine(sayi));
+        renkListesi.ForEach(renk => Console.WriteLine(renk));
+
+        //Liste içerisinde arama 
+
+        // Console.WriteLine(sayiListesi.Contains(4));
+        // Console.WriteLine(renkListesi.Contains("Kırmızı"));
+
+        //Eleman ile index'e erişme
+
+       // Console.WriteLine(renkListesi.BinarySearch("Sari"));
+         
+       //Diziyi listeye çevirme
+
+        // string[] dizi = {"test 1","test 2","test 3"};
+
+        // List<string> diziList = new List<string>(dizi);
+
+        // foreach (var item in diziList) {
+        //     Console.WriteLine(item);
+        // }
+        
+
+       List<Kullanıcılar> kullaniciListesi = new List<Kullanıcılar>();
+        
+         Kullanıcılar kullanici1 = new Kullanıcılar();
+         kullanici1.Isim= "ihsan";
+         kullanici1.Soyisim= "ihsan";
+         kullanici1.Yas= 34;
+
+         Kullanıcılar kullanici2 = new Kullanıcılar();
+         kullanici1.Isim= "ihsan 1";
+         kullanici1.Soyisim= "ihsan 1";
+         kullanici1.Yas= 35;
+
+         kullaniciListesi.Add(kullanici1);
+         kullaniciListesi.Add(kullanici2);
+
+         Console.WriteLine(kullaniciListesi.Count());
+        }//Main         
+    }//Program-class-end    
+       
+        public class Kullanıcılar{
+            private string isim;
+            private string soyisim;
+            private int yas;
+            
+            public string Isim { get => isim; set => isim = value; }
+            public string Soyisim { get => soyisim; set => soyisim = value; }
+            public int Yas { get => yas; set => yas= value; }
+        }
+       
 }
 

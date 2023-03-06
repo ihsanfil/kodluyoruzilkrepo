@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSİ\\Desktop\\patika yazılım eğitimi\\GIT ORNEK\\GIT ORNEK.csproj",
+      "projectUniqueName": "C:\\Users\\MSİ\\OneDrive\\Masaüstü\\patika yazılım eğitimi\\GIT ORNEK\\GIT ORNEK.csproj",
       "projectName": "GIT ORNEK",
-      "projectPath": "C:\\Users\\MSİ\\Desktop\\patika yazılım eğitimi\\GIT ORNEK\\GIT ORNEK.csproj",
+      "projectPath": "C:\\Users\\MSİ\\OneDrive\\Masaüstü\\patika yazılım eğitimi\\GIT ORNEK\\GIT ORNEK.csproj",
       "packagesPath": "C:\\Users\\MSİ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSİ\\Desktop\\patika yazılım eğitimi\\GIT ORNEK\\obj\\",
+      "outputPath": "C:\\Users\\MSİ\\OneDrive\\Masaüstü\\patika yazılım eğitimi\\GIT ORNEK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
